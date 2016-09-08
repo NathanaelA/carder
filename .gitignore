@@ -1,0 +1,10 @@
+/.idea
+/.jshintrc
+
+node_modules/
+go.bat
+karma.conf.js
+tslint.json
+watcher.*
+*.docx
+platforms/
