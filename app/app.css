@@ -41,8 +41,8 @@ button {
     border-radius: 10;
     border-color: black;
     border-width: 2;
-    height: 736;
-    width: 552;
+    height: 440;
+    width: 330;
 }
 
 #card .black Label {
@@ -60,24 +60,20 @@ button {
 
 
 .cardRightPip {
-    font-size: 100;
+    font-size: 50;
     horizontal-align: center ;
     padding-left: 2;
     text-align: center;
-    width: 82;
+    width: 50;
 
 }
 
 .cardLeftPip {
-    font-size: 100;
+    font-size: 50;
     horizontal-align: center ;
     text-align: center;
-    width: 82;
+    width: 50;
 
-}
-
-.offset1 .cardLeftPip, .offset1 .cardRightPip {
-    padding-left: 10;
 }
 
 .offset3 .cardLeftPip, .offset3 .cardRightPip {
@@ -85,24 +81,24 @@ button {
 }
 
 .cardRightValue, .cardLeftValue {
-    font-size: 128;
-    width:75;
+    font-size: 78;
+    width:50;
     text-align: center;
 }
 
 .pip {
     horizontal-align: center ;
     vertical-align: center;
-    font-size: 177;
-    width: 128;
+    font-size: 104;
+    width: 76;
     text-align: center;
 }
 
 .pipr {
     horizontal-align: center ;
     vertical-align: center;
-    font-size: 177;
-    width: 130;
+    font-size: 104;
+    width: 76;
     text-align: center;
 }
 
@@ -122,27 +118,28 @@ button {
 }
 
 .offset0 .pipr {
-  margin-right: 22;
+  margin-right: 8;
 }
 
 .offset1 .pip {
-    margin-left: 50;
+    margin-left: 30;
 }
 
 .offset1 .pipr {
-    margin-right: 40;
+    margin-right: 20;
 }
 
 .offset3 .pip {
-    margin-right: 1;
+    margin-right: 10;
 }
 
 .offset3 .pipr {
     margin-right: 26;
 }
 
+
 .offset2 .pip {
-    margin-right: -30;
+    margin-right: 0;
 }
 
 .offset2 .pipr {
