@@ -10,8 +10,8 @@
     }
   },
   "dependencies": {
+    "nativescript-dom": "^1.0.6",
     "nativescript-dynamicloader": "file:..\\repos\\nativescript-dynamicLoader\\nativescript-dynamicloader-1.0.0.tgz",
-    "nativescript-hidden": "file:..\\repos\\nativescript-hidden",
     "nativescript-liveedit": "^2.2.0",
     "nativescript-unit-test-runner": "^0.3.3",
     "tns-core-modules": "2.2.1"
