@@ -1,0 +1,18 @@
+<GridLayout rows="auto,auto,*,auto,auto" columns="auto,*,*,*,auto">
+    <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+    <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+
+    <Label text="{{ pip }}" row="1" col="1" class="pip"/>
+    <Label text="{{ pip }}" row="1" col="3" class="pip"/>
+
+    <Label text="{{ pip }}" row="1" rowSpan="2" col="2" class="pip pipc"/>
+
+    <Label text="{{ pip }}" row="2" col="1" class="pip"/>
+    <Label text="{{ pip }}" row="2" col="3" class="pip"/>
+
+    <Label text="{{ pip }}" row="3" col="1" rotate="180" class="pipr"/>
+    <Label text="{{ pip }}" row="3" col="3" rotate="180" class="pipr"/>
+
+    <Label text="{{ pip }}" row="3" col="4" rotate="180" class="cardRightPip rotated"/>
+    <Label text="{{ value }}" row="4" col="4" rotate="180" class="cardRightValue rotated"/>
+</GridLayout>

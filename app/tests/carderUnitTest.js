@@ -5,16 +5,11 @@
 var cards = require('../cards.js');
  
 describe('Cards', function() {
-	describe("current card", function() {
+	describe("current card", function() { 
 		it ('should return spades', function() { 
 			cards.resetDeck();
 			var result = cards.getCurrentCard();
 			assert.equal(result.suit, "Spade"); 
-		});  
-
-		it ('should return Ace', function() {
-			cards.resetDeck();
-			var result = cards.getCurrentCard();
 			assert.equal(result.value, "Ace");
 		});
 	});
@@ -23,7 +18,7 @@ describe('Cards', function() {
 		it ('should return the 2 of spades', function() {
 			cards.resetDeck();
 			var result = cards.nextCard();
-			assert.equal(result.suit, "Spade"); 
+			assert.equal(result.suit, "Spade");
 			assert.equal(result.value, "2");
 		});
 		it ('should return the 3 of spades', function() {
@@ -44,11 +39,18 @@ describe('Cards', function() {
 		});
 	});
 
+	describe("should return special", function() {
+		it ('should return special', function() {
+			cards.setJoker();
+			var results = cards.getCurrentCard();
+			assert.equal(results.value, "Joker");
+		});
+	});
 
 	describe("random card", function() {
 		it ('should return a random card', function() {
 			var lastCard = cards.randomCard(), nextCard;
-			for (var i = 0; i < 10; i++) {
+			for (var i = 0; i < 5; i++) {
 				nextCard = cards.randomCard();
 				if (nextCard.suit !== lastCard.suit && nextCard.value !== lastCard.value) {
 					break;

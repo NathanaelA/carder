@@ -1,0 +1,9 @@
+<GridLayout rows="auto,auto,*,auto,auto" columns="auto,auto,*,auto,auto">
+    <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+    <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+
+    <Image row="1" rowSpan="3" col="2" src="{{ image }}"/>
+
+    <Label text="{{ pip }}" row="3" col="4" rotate="180" class="cardRightPip rotated"/>
+    <Label text="{{ value }}" row="4" col="4" rotate="180" class="cardRightValue rotated"/>
+</GridLayout>

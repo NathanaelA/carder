@@ -1,0 +1,3 @@
+<GridLayout Rows="*" columns="*">
+    <Image class="joker" src="~/images/joker.png" />
+</GridLayout>

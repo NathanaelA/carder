@@ -5,8 +5,14 @@
 }
 
 button {
-    font-size: 42;
+    font-size: 30;
     horizontal-align: center;
+}
+
+.button {
+    margin-top: 12;
+    padding-left: 24;
+    background-color: lightgray;
 }
 
 .message {
@@ -24,9 +30,130 @@ button {
 }
 
 .red {
-    color: red;
+    color: #bd1028;
 }
 
 .black {
     color: black;
+}
+
+#card {
+    border-radius: 10;
+    border-color: black;
+    border-width: 2;
+    height: 736;
+    width: 552;
+}
+
+#card .black Label {
+    font-color: black;
+}
+
+#card .red Label {
+    font-color: #bd1028;
+}
+
+
+#card Label {
+    font-family: hoyle, "Hoyal Playing Cards";
+}
+
+
+.cardRightPip {
+    font-size: 100;
+    horizontal-align: center ;
+    padding-left: 2;
+    text-align: center;
+    width: 82;
+
+}
+
+.cardLeftPip {
+    font-size: 100;
+    horizontal-align: center ;
+    text-align: center;
+    width: 82;
+
+}
+
+.offset1 .cardLeftPip, .offset1 .cardRightPip {
+    padding-left: 10;
+}
+
+.offset3 .cardLeftPip, .offset3 .cardRightPip {
+    padding-right: 5;
+}
+
+.cardRightValue, .cardLeftValue {
+    font-size: 128;
+    width:75;
+    text-align: center;
+}
+
+.pip {
+    horizontal-align: center ;
+    vertical-align: center;
+    font-size: 177;
+    width: 128;
+    text-align: center;
+}
+
+.pipr {
+    horizontal-align: center ;
+    vertical-align: center;
+    font-size: 177;
+    width: 130;
+    text-align: center;
+}
+
+.pipc {
+    margin-bottom: 60;
+}
+
+.face {
+    font-size: 280;
+    background-color: blue;
+    padding: -20;
+
+}
+
+.offset0 .pip {
+  margin-left: 15;
+}
+
+.offset0 .pipr {
+  margin-right: 22;
+}
+
+.offset1 .pip {
+    margin-left: 50;
+}
+
+.offset1 .pipr {
+    margin-right: 40;
+}
+
+.offset3 .pip {
+    margin-right: 1;
+}
+
+.offset3 .pipr {
+    margin-right: 26;
+}
+
+
+.offset2 .pip {
+    margin-right: -30;
+}
+
+.offset2 .pipr {
+    margin-right: 40;
+}
+
+.joker, .back {
+    margin: 2;
+}
+
+.hidden {
+    visibility: collapse;
 }
