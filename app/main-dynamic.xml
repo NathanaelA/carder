@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" actionBarHidden="true">
+  <GridLayout rows="auto,auto,*,auto">
+    <Label id="cardExample" text="Card Example" class="title" tap="joker"/>
+    <Label row="1" id="message" automationText="message" text="{{ text }}" class="message" tap="scrollOff" textWrap="true"/>
+    <StackLayout row="2" id="card" automationText="card" class="{{ color }}" tap="click">
+
+    </StackLayout>
+    <StackLayout row="3" orientation="horizontal" class="button">
+      <Button automationText="prior" id="prior" text="Prior" tap="prior" />
+      <Button automationText="random" id="random" text="Random" tap="random" />
+      <Button automationText="next" id="next" text="Next" tap="next" />
+    </StackLayout>
+
+  </GridLayout>
+</Page>

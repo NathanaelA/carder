@@ -1,8 +1,185 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" actionBarHidden="true">
   <StackLayout>
-    <Label text="Card Example" class="title"/>
-    <Label text="{{ value }}" class="message" textWrap="true"/>
-    <Label text="{{ card }}" class="{{cardStyle}}" height="200"/>
-    <Button text="Random" tap="click" />
+    <Label id="cardExample" text="Card Example" class="title" tap="joker"/>
+    <Label id="message" automationText="message" text="{{ text }}" class="message" tap="scrollOff" textWrap="true"/>
+    <StackLayout id="card" automationText="card" class="{{ color }}" tap="click">
+
+      <GridLayout id="CardBack" Rows="*" columns="*" class="hidden">
+        <Image class="back" src="~/images/back.png" />
+      </GridLayout>
+
+      <GridLayout id="CardAce" rows="auto,auto,*,auto,auto" columns="auto,*,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+        <Label text="{{ pip }}" row="2" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="3" col="2" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="4" col="2" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="Card2" rows="auto,auto,*,auto,auto" columns="auto,*,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+        <Label text="{{ pip }}" row="1" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="3" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="2" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="4" col="2" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="Card3" rows="auto,auto,*,auto,auto" columns="auto,*,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue" />
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+        <Label text="{{ pip }}" row="1" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="2" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="3" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="2" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="4" col="2" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="Card4" rows="auto,auto,*,auto,auto" columns="auto,*,*,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+        <Label text="{{ pip }}" row="1" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="1" col="2" class="pip"/>
+        <Label text="{{ pip }}" row="3" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="2" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="3" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="4" col="3" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="Card5" rows="auto,auto,*,auto,auto" columns="auto,*,*,*,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+        <Label text="{{ pip }}" row="1" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="1" col="3" class="pip"/>
+        <Label text="{{ pip }}" row="2" col="2" class="pip"/>
+        <Label text="{{ pip }}" row="3" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="3" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="4" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="4" col="4" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="Card6" rows="auto,auto,*,auto,auto" columns="auto,*,*,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+
+        <Label text="{{ pip }}" row="1" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="1" col="2" class="pip"/>
+
+        <Label text="{{ pip }}" row="2" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="2" col="2" class="pip"/>
+
+        <Label text="{{ pip }}" row="3" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="2" rotate="180" class="pipr"/>
+
+        <Label text="{{ pip }}" row="3" col="3" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="4" col="3" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="Card7" rows="auto,auto,*,auto,auto" columns="auto,*,*,*,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+
+        <Label text="{{ pip }}" row="1" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="1" col="3" class="pip"/>
+
+        <Label text="{{ pip }}" row="1" rowSpan="2" col="2" class="pip pipc"/>
+
+        <Label text="{{ pip }}" row="2" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="2" col="3" class="pip"/>
+
+        <Label text="{{ pip }}" row="3" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="3" rotate="180" class="pipr"/>
+
+        <Label text="{{ pip }}" row="3" col="4" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="4" col="4" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="Card8" rows="auto,auto,*,*,auto,auto" columns="auto,*,*,*,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+
+        <Label text="{{ pip }}" row="1" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="1" col="3" class="pip"/>
+
+        <Label text="{{ pip }}" row="2" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="2" col="3" class="pip"/>
+
+        <Label text="{{ pip }}" row="3" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="3" rotate="180" class="pipr"/>
+
+        <Label text="{{ pip }}" row="4" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="4" col="3" rotate="180" class="pipr"/>
+
+        <Label text="{{ pip }}" row="4" col="4" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="5" col="4" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="Card9" rows="auto,auto,*,*,auto,auto" columns="auto,*,*,*,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+
+        <Label text="{{ pip }}" row="1" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="1" col="3" class="pip"/>
+
+        <Label text="{{ pip }}" row="2" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="2" col="3" class="pip"/>
+
+        <Label text="{{ pip }}" row="2" rowSpan="2" col="2" class="pip"/>
+
+        <Label text="{{ pip }}" row="3" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="3" rotate="180" class="pipr"/>
+
+        <Label text="{{ pip }}" row="4" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="4" col="3" rotate="180" class="pipr"/>
+
+        <Label text="{{ pip }}" row="4" col="4" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="5" col="4" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="Card10" rows="auto,auto,*,*,auto,auto" columns="auto,*,*,*,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+
+        <Label text="{{ pip }}" row="1" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="1" col="3" class="pip"/>
+
+        <Label text="{{ pip }}" row="1" rowSpan="2" col="2" class="pip"/>
+
+        <Label text="{{ pip }}" row="2" col="1" class="pip"/>
+        <Label text="{{ pip }}" row="2" col="3" class="pip"/>
+
+        <Label text="{{ pip }}" row="3" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="3" col="3" rotate="180" class="pipr"/>
+
+        <Label text="{{ pip }}" row="3" rowSpan="2" col="2" rotate="180" class="pipr"/>
+
+        <Label text="{{ pip }}" row="4" col="1" rotate="180" class="pipr"/>
+        <Label text="{{ pip }}" row="4" col="3" rotate="180" class="pipr"/>
+
+        <Label text="{{ pip }}" row="4" col="4" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="5" col="4" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="CardFace" rows="auto,auto,*,auto,auto" columns="auto,auto,*,auto,auto" class="hidden">
+        <Label text="{{ value }}" row="0" col="0" class="cardLeftValue"/>
+        <Label text="{{ pip }}" row="1" col="0" class="cardLeftPip"/>
+
+        <Image row="1" rowSpan="3" col="2" src="{{ image }}"/>
+
+        <Label text="{{ pip }}" row="3" col="4" rotate="180" class="cardRightPip rotated"/>
+        <Label text="{{ value }}" row="4" col="4" rotate="180" class="cardRightValue rotated"/>
+      </GridLayout>
+
+      <GridLayout id="CardJoker" Rows="*" columns="*" class="hidden">
+        <Image class="joker" src="~/images/joker.png" />
+      </GridLayout>
+
+    </StackLayout>
+    <StackLayout orientation="horizontal" class="button">
+      <Button automationText="prior" id="prior" text="Prior" tap="prior" />
+      <Button automationText="random" id="random" text="Random" tap="random" />
+      <Button automationText="next" id="next" text="Next" tap="next" />
+    </StackLayout>
+
   </StackLayout>
 </Page>
