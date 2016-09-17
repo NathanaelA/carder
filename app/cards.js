@@ -101,3 +101,27 @@ exports.randomCard = function() {
     return exports.getCurrentCard();
 };
 
+exports.pokerHand1 = function() {
+    var hand = [];
+    for (var i=0;i<5;i++) {
+        hand.push(exports.randomCard());
+    }
+    return hand;
+};
+
+exports.pokerHand2 = function() {
+    var hand = [];
+    do {
+        var rndCard = exports.randomCard();
+        var found = false;
+        for (var j=0;j<hand.length;j++) {
+            if (rndCard.id === hand[j].id) {
+                found = true;
+            }
+        }
+        if (!found) {
+            hand.push(rndCard);
+        }
+    } while (hand.length < 5);
+    return hand;
+};

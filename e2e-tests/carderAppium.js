@@ -20,7 +20,7 @@ describe("Carder app tests", function () {
         });
     });
 
-    it("should find an the card title", function () {
+    it("should find the card title", function () {
         return driver
             .elementByAccessibilityId("message")
             .text().should.become('Back of Card');

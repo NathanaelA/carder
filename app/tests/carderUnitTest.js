@@ -6,7 +6,7 @@ var cards = require('../cards.js');
  
 describe('Cards', function() {
 	describe("current card", function() { 
-		it ('should return spades', function() { 
+		it ('should return spades', function() {
 			cards.resetDeck();
 			var result = cards.getCurrentCard();
 			assert.equal(result.suit, "Spade"); 
@@ -61,6 +61,26 @@ describe('Cards', function() {
 			assert.notEqual(nextCard.suit, lastCard.suit, "Random card failed");
 		});
 	});
+
+	 describe("not used", function() {
+ 	    /*	it ('should return a 5 card poker hand', function() {
+			var hand = cards.pokerHand();
+			assert.equal(hand.length, 5);
+		}); */
+
+		/* it ('should return 5 distinct cards', function() {
+			for (var k=0;k<20;k++) {
+				var hand = cards.pokerHand();
+				for (var i = 0; i < 5; i++) {
+					for (var j = i + 1; j < 5; j++) {
+						assert.notEqual(hand[i].id, hand[j].id, "Matching cards");
+					}
+				}
+			}
+		}); */
+	});
+
+
 });
 
 
